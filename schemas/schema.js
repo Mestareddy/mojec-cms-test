@@ -13,7 +13,7 @@ import awards from "./homeAwards&Achievements";
 import brands from "./brandSlider";
 import businessVerticals from "./businessVertical";
 import ourPeople from "./ourPeople";
-import history from "./History";
+import history from "./history";
 import images from './meterContents/images';
 import content from './meterContents/content';
 import overview from './meterContents/overview';
