@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "project": {
+    "name": "mojec-cms"
+  },
+  "api": {
+    "projectId": "y3w4a0ei",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/dashboard",
+    "@sanity/desk-tool",
+    "groq-list",
+    "pdf-generator",
+    "@sanity/orderable-document-list",
+    "mdide",
+    "vercel-deploy",
+    "google-translate",
+    "media",
+    "order-documents",
+    "tabs"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision",
+        "order-documents"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/file/asset-sources",
+      "path": "./parts/assetSources.js"
+    }
+  ]
+}
